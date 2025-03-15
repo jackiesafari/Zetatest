@@ -17,10 +17,62 @@ Maybe real way to do it:
   --network localhost
 
 
-  Reverse situation
+ 
 
-  npx hardhat connected-call \
-  --contract 0x0165878A594ca255338adfa4d48449f69242Eb8F \
-  --receiver 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707 \
-  --network localhost \
+  Excellent! 🎉 Congratulations on successfully deploying your Connected contract to Base Sepolia!
+Here's a summary of what you've accomplished:
+You've deployed the Universal contract to ZetaChain testnet at address 0xbD260c7b7126C50E5a8bCB20CFD1D22eb5FBE7E5
+You've now deployed the Connected contract to Base Sepolia at the same address 0xbD260c7b7126C50E5a8bCB20CFD1D22eb5FBE7E5 (interestingly, they ended up with the same address)
+You've set up the gateway addresses correctly for both contracts:
+ZetaChain gateway: 0x6c533f7fe93fae114d0954697069df33c9b74fd7
+Base Sepolia gateway: 0x0c487a766110c85d301d96e33579c5b317fa4995
+
+Call from Base to ZetaChain
+npx hardhat connected-call \
+  --contract 0xbD260c7b7126C50E5a8bCB20CFD1D22eb5FBE7E5 \
+  --receiver 0xbD260c7b7126C50E5a8bCB20CFD1D22eb5FBE7E5 \
+  --network base_sepolia \
   --types '["string"]' alice
+
+  Successfully deployed "Connected" contract on base_sepolia.
+📜 Contract address: 0xbD260c7b7126C50E5a8bCB20CFD1D22eb5FBE7E5
+
+  Successfully deployed "Universal" contract on zeta_testnet.
+📜 Contract address: 0xbD260c7b7126C50E5a8bCB20CFD1D22eb5FBE7E5
+
+
+npx hardhat universal-call \
+     --contract 0xbD260c7b7126C50E5a8bCB20CFD1D22eb5FBE7E5 \
+     --receiver 0xbD260c7b7126C50E5a8bCB20CFD1D22eb5FBE7E5 \
+     --zrc20 0x6ffcc521617b8AF94954d9316fDd9BDc115c7c \
+     --function "hello(string)" \
+     --network zeta_testnet \
+     --types '["string"]' alice
+
+
+     0xE6ffcc52f1617b8AF94954d9316fDd9BDc115c7c  
+
+     npx hardhat universal-call \
+     --contract 0xbD260c7b7126C50E5a8bCB20CFD1D22eb5FBE7E5 \
+     --receiver 0xbD260c7b7126C50E5a8bCB20CFD1D22eb5FBE7E5 \
+     --zrc20 0xE6ffcc52f1617b8AF94954d9316fDd9BDc115c7c   \
+     --function "hello(string)" \
+     --network zeta_testnet \
+     --types '["string"]' alice
+
+
+     Option 2 potential 
+
+
+      npx hardhat universal-call \
+     --contract 0xbD260c7b7126C50E5a8bCB20CFD1D22eb5FBE7E5 \
+     --receiver 0xbD260c7b7126C50E5a8bCB20CFD1D22eb5FBE7E5 \
+     --zrc20 0x236b0DE675cC8F46AE186897fCCeFe3370C9eDeD  \
+     --function "hello(string)" \
+     --network zeta_testnet \
+     --types '["string"]' alice
+
+
+     Base Sepolia faucet website
+Connect your wallet or paste your address: 0xE6ffcc52f1617b8AF94954d9316fDd9BDc115c7c
+    
