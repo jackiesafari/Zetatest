@@ -1,4 +1,4 @@
-# Example ZetaChain contracts
+# Integrating ZetaChain contracts into a social media platform
 
 > Please, note that code from this repository is referenced in [the
 > documentation](https://github.com/zeta-chain/docs). When making changes to the
@@ -7,10 +7,9 @@
 
 ## Overview
 
-Welcome to the ZetaChain example contracts repository! This collection of smart
-contract projects is written using Hardhat and Solidity, specifically for the
-ZetaChain blockchain. Each project showcases different functionalities and use
-cases that can be implemented on the ZetaChain platform.
+Team Moments has integrated Zetachain into their Social media platform Moments. Where users initiate the app during a significant moment (event, promise, commitment) The AI assistant suggests ideal formats for capturing the moment based on context Multiple verification methods are prompted at natural intervals. ZetaChain would elevate the experience through effortless crosschain transactions so everyone can join in the fun! 
+
+
 
 ### Universal Apps
 
