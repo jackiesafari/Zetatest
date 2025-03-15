@@ -1,0 +1,26 @@
+npx hardhat universal-call \
+  --contract 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707 \
+  --receiver 0x0165878A594ca255338adfa4d48449f69242Eb8F \
+  --zrc20 0x6ffcc521617b8AF94954d9316fDd9BDc115c7c \
+  --function "hello(string)" \
+  --network localhost \
+  --types '["string"]' alice
+
+Maybe real way to do it:
+
+    npx hardhat universal-call \
+  --contract 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707 \
+  --receiver 0x0165878A594ca255338adfa4d48449f69242Eb8F \
+  --zrc20 0x6ffcc521617b8AF94954d9316fDd9BDc115c7c \
+  --function "hello(string)" \
+  --types '["string"]' alice \
+  --network localhost
+
+
+  Reverse situation
+
+  npx hardhat connected-call \
+  --contract 0x0165878A594ca255338adfa4d48449f69242Eb8F \
+  --receiver 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707 \
+  --network localhost \
+  --types '["string"]' alice

@@ -2,6 +2,7 @@ import "@nomicfoundation/hardhat-toolbox";
 import { HardhatUserConfig } from "hardhat/config";
 import * as dotenv from "dotenv";
 
+import "./tasks/universal-call";
 import "./tasks/deploy";
 import "@zetachain/localnet/tasks";
 import "@zetachain/toolkit/tasks";
